@@ -1,3 +1,10 @@
+# AISIS Online Redesign Implementation
+
+Implements the redesign concept of the Ateneo Integrated Student Information System
+by Miguel Galace.
+
+Link to the mockups: https://www.behance.net/gallery/47185053/AISIS-Online-Redesign-Concept
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
