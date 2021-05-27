@@ -1,24 +1,23 @@
-import Login from './LoginPage';
-import Classes from './ClassesPage';
+import Login from './Pages/LoginPage';
+import Classes from './Pages/ClassesPage';
 import { useState } from 'react';
+import { Page, Route, RouteContext } from './Routing';
 
-export const Pages = {
-    "Login": Login,
-    "Classes": Classes
-};
-
-// TODO: Configure routing
 function App(): JSX.Element {
-    const [currentPage, setCurrentPage] = useState<string>("Login");
-    const handleChangePage = (page: string) => {
-        setCurrentPage(page);
-    }
+    const [currentPage, setCurrentPage] = useState<Page>(Page.Login);
+    const values = { currentPage, setCurrentPage };
 
     return (
-        <main>
-            { currentPage === "Login" ? <Login onChangePage={(page) => handleChangePage(page)} /> : <Classes /> }
-        </main>
-        
+        <RouteContext.Provider value={values}>
+            <main>
+                <Route page={Page.Login}>
+                    <Login />
+                </Route>
+                <Route page={Page.Classes}>
+                    <Classes />
+                </Route>
+            </main>
+        </RouteContext.Provider>
     );
 }
 
