@@ -23,11 +23,11 @@ export const Route = ({ page, children }: RouteProps): JSX.Element => {
 
 type RouteContextProps = {
     currentPage: Page;
-    setCurrentPage: React.Dispatch<React.SetStateAction<Page>>;
+    setCurrentPage(currentPage: Page): Promise<void>;
 }
 
 export const RouteContext = React.createContext<RouteContextProps>({
     // Login page is the initial page
     currentPage: Page.Login,
-    setCurrentPage: currentPage => { }
+    setCurrentPage: currentPage => new Promise<void>(() => { }) // default value, should be replaced
 });
