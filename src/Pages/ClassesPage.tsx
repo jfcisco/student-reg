@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { RouteContext } from '../RouteContext';
+import { Page, RouteContext } from '../Routing';
 
 function ClassesPage(): JSX.Element {
     const { setCurrentPage } = useContext(RouteContext);
@@ -8,7 +8,7 @@ function ClassesPage(): JSX.Element {
         <div>
             Classes page coming soon!
              
-            <button onClick={() => setCurrentPage && setCurrentPage("login")} >
+            <button onClick={() => setCurrentPage(Page.Classes)} >
                 Go Back
             </button>
         </div>
