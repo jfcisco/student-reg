@@ -8,7 +8,7 @@ function ClassesPage(): JSX.Element {
         <div>
             Classes page coming soon!
              
-            <button onClick={() => setCurrentPage(Page.Classes)} >
+            <button onClick={() => setCurrentPage(Page.Login)} >
                 Go Back
             </button>
         </div>
