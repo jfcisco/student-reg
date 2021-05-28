@@ -3,13 +3,14 @@ import Classes from './Pages/ClassesPage';
 import { useState } from 'react';
 import { Page, Route, RouteContext } from './Routing';
 
-const usePageState = (initialPage: Page): [Page, (page: Page) => Promise<void>] => {
+const usePageState = (initialPage: Page): [Page, (page: Page, delayCallback: () => void) => Promise<void>] => {
   const [currentPage, setCurrentPage] = useState<Page>(initialPage);
 
-  async function setCurrentPageAsync(page: Page) {
+  async function setCurrentPageAsync(page: Page, delayCallback: () => void) {
     const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
     await delay(1000);
+    delayCallback();
     setCurrentPage(page);
   }
 
