@@ -5,4 +5,9 @@
 
 .btn-submit {
     @apply bg-blue-900 rounded-md py-2 text-gray-200 text-sm font-bold hover:bg-blue-800 transition-colors;
+    @apply focus:outline-black;
+}
+
+.btn-submit:disabled {
+    @apply opacity-50;
 }
