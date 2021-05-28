@@ -23,7 +23,7 @@ export const Route = ({ page, children }: RouteProps): JSX.Element => {
 
 type RouteContextProps = {
     currentPage: Page;
-    setCurrentPage(currentPage: Page): Promise<void>;
+    setCurrentPage(currentPage: Page, delayCallback: () => void): Promise<void>;
 }
 
 export const RouteContext = React.createContext<RouteContextProps>({
