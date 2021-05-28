@@ -1,0 +1,28 @@
+.btn-logout {
+  @apply bg-yellow-800 mt-8 px-8 py-2 rounded-md shadow;
+}
+
+.nav-menu {
+  /* Style for the whole menu component */
+  @apply absolute w-8/12 bg-blue-800 min-h-screen transition-transform z-10 text-lg lg:text-base shadow-md;
+  @apply lg:static lg:w-3/12;
+  /* Layout for the navigation links  */
+  @apply pt-10 pl-8; 
+}
+
+.nav-header {
+  @apply text-2xl font-bold mt-4 mb-1 uppercase;
+  @apply lg:text-base;
+}
+
+.nav-link {
+  @apply ml-4 mt-1;
+}
+
+.nav-menu--open {
+  @apply transform translate-x-0 lg:transform-none;
+}
+
+.nav-menu--closed {
+  @apply transform -translate-x-full lg:transform-none;
+}
