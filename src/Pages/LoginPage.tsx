@@ -15,11 +15,11 @@ function LoginPage(): JSX.Element {
   }
 
   return (
-    <div className="h-screen w-auto bg-blue-800 flex items-center text-gray-600">
-      <div className="mx-auto">
+    <div className="min-h-screen py-4 w-auto bg-blue-800 flex items-center text-gray-600">
+      <div className="mx-auto px-4 sm:px-0">
         <header className="text-white text-center mb-6">
           <img className="mx-auto mb-2" src="https://via.placeholder.com/60x60" alt="university logo" />
-          <h1 className="font-serif font-extralight text-3xl uppercase tracking-wider max-w-sm text-gray-200 ">
+          <h1 className="font-serif font-extralight text-3xl uppercase tracking-wider leading-7 max-w-sm text-gray-200 ">
             Not <br /> Ateneo de Manila University</h1>
         </header>
 

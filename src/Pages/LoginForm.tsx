@@ -10,7 +10,7 @@ export function LoginForm({ onSubmit, isLoading }: LoginFormProps): JSX.Element 
       onSubmit={(e) => onSubmit(e)}>
       <h2 className="font-bold text-blue-800 text-2xl mb-5">Log in to Student System</h2>
 
-      <div className="grid grid-cols-3 grid-rows-3 gap-y-3 mb-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 mb-3">
         <label htmlFor="username">Username:</label>
         <input className="text-field col-span-2" type="text" name="username" />
 
